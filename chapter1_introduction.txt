@@ -1,0 +1,10 @@
+1.
+AI systems need the ability to acquire their own knowledge, by extracting patterns from raw data. This capability is known asmachine learning
+
+2.
+ use machine learning to discover not onlythe mapping from representation to output but also the representation itself.This approach is known asrepresentation learning.
+
+3. 
+The quintessential example of a representation learning algorithm is theau-toencoder
+
+
