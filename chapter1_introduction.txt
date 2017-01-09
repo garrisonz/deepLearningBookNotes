@@ -7,4 +7,43 @@ AI systems need the ability to acquire their own knowledge, by extracting patter
 3. 
 The quintessential example of a representation learning algorithm is theau-toencoder
 
+4.
+To summarize, deep learning, the subject of this book, is an approach to AI.Speciﬁcally, it is a type of machine learning, a technique that allows computersystems to improve with experience and data
+
+5.
+Figure 1.4: A Venn diagram showing how deep learning is a kind of representation learning,which is in turn a kind of machine learning, which is used for many but not all approachesto AI. Each section of the Venn diagram includes an example of an AI technology
+
+6.
+Theﬁeld of deep learning is primarily concerned with how to build computer systemsthat are able to successfully solve tasks requiring intelligence, while the ﬁeld ofcomputational neuroscience is primarily concerned with building more accuratemodels of how the brain actually works
+
+7.
+The concept of distributed representation iscentral to this book, and will be described in greater detail in chapter 15
+
+8.
+deep networks were generally believed to be very diﬃcultto train. We now know that algorithms that have existed since the 1980s workquite well, but this was not apparent circa 2006. The issue is perhaps simply thatthese algorithms were too computationally costly to allow much experimentationwith the hardware available at the time
+
+9.
+ The learning algorithms reaching human performance on complex taskstoday are nearly identical to the learning algorithms that struggled to solve toyproblems in the 1980s
+
+
+10.
+Unless new technologiesallow faster scaling, artiﬁcial neural networks will not have the same number ofneurons as the human brain until at least the 2050s.
+Even today’s networks, which we consider quite large from a computationalsystems point of view, are smaller than the nervous system of even relativelyprimitive vertebrate animals like frogs.
+
+
+Three waves of development of deep learning
+1. deep learning known as cybernetics in the 1940s-1960s
+2. deep learning known as connectionism in the 1980s-1990s.
+3.the current resurgence under the name deep learning beginning in 2006.
+
+From 2006 to now (2016), deep neural network outperformed competing AI systems based on other machine learning technologies as well as hand-designed functionality
+The focus of deep learning research has changed dramatically within the time of this wave. The third wave began with a focus on new unsupervised learning techniques and the ability of deep models to generalize well from small datasets, but today there is more interest in much older supervised learning algorithms and the ability of deep mdels to leverage large lableed datasets.
+
+The application of deep learning in real-world
+1.A dramaticmoment in the meteoric rise of deep learning came when a convolutional networkwon this challenge for the ﬁrst time and by a wide margin, bringing down thestate-of-the-art top-5 error rate from 26.1% to 15.3% (Krizhevsky et al., 2012)
+2.Modernobject recognition networks process rich high-resolution photographs and do nothave a requirement that the photo be cropped near the object to be recognized
+3.Deep learning has also had a dramatic impact on speech recognition
+4.Deep networks have also had spectacular successes for pedestrian detection andimage segmentation
+5.At the same time that the scale and accuracy of deep networks has increased,so has the complexity of the tasks that they can solve
+
 
