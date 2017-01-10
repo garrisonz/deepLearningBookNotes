@@ -1,0 +1,35 @@
+chater 2
+Mathematical object :
+Scalars : A scalar is just a single number
+
+Vectors : A vector is an array of numbers. Typically we give vectors lower case names written in bold typeface, suchasx.
+we deﬁne a set containing the indices and write the set as a subscript. Forexample, to access x1,x3 and x6, we deﬁne the set S={1,3,6} and write xS. We use the − sign to index the complement of a set. For example x−1 isthe vector containing all elements of x except for x1, and x−S is the vector containing all of the elements of x except for x1, x3 and x6
+
+Matrices: A matrix is a 2-D array of numbers, so each element is identiﬁed by two indices instead of just one. We usually give matrices upper-casevariable names with bold typeface, such as A.
+If a real-valued matrixAhasa height ofmand a width ofn, then we say that A ∈ R(m×n). For example,A1,1is theupper left entry of A and Am,n is the bottom right entry. Ai,: is  the i-th row of A. Likewise A:,i the i-th column of A
+f(A)i,j gives element (i, j) of the matrix computed by applying the function f to A
+
+Tensors: In some cases we will need an array with more than two axes. We denote a tensor named “A” with this typeface:A. We identify the element of A at coordinates (i, j, k) by writing Ai,j,k.
+
+So,
+Scalar is a signle number.
+Vectors is an array of number.
+Matrices is an 2-D array of number.
+Tensors is an multi-D array of number.
+
+Transpose
+We denote the transpose of amatrix A as AT, and it is deﬁned such that(AT)i,j= Aj,i.
+Vectors can be thought of as matrices that contain only one column. Thetranspose of a vector is therefore a matrix with only one row. Sometimes we deﬁne a vector by writing out its elements in the text inline as a row matrix, x = [x1, x2, x3]T.
+A scalar can be thought of as a matrix with only a single entry. From this, wecan see that a scalar is its own transpose: a = aT
+
+1.
+We can add matrices to each other, as long as they have the same shape, justby adding their corresponding elements: C = A + B where Ci,j= Ai,j+ Bi,j
+
+2.
+We can also add a scalar to a matrix or multiply a matrix by a scalar, justby performing that operation on each element of a matrix:D=a · B+cwhereDi,j= a · Bi,j+ c
+
+3.
+In the context of deep learning, We allow the addition of matrix and a vector, yielding another matrix:C=A+b, where Ci,j=Ai,j+bj. In other words, the vector b is added to each row of thematrix.
+
+
+
