@@ -32,4 +32,106 @@ We can also add a scalar to a matrix or multiply a matrix by a scalar, justby pe
 In the context of deep learning, We allow the addition of matrix and a vector, yielding another matrix:C=A+b, where Ci,j=Ai,j+bj. In other words, the vector b is added to each row of thematrix.
 
 
+question in Chapter 2:
+1. dot product ?
+2. Ax = b (2.11)
+3. linear combination
+4. span of a set of vector ? whether b is in the span of the columns of A
+5. this kind of redundancy is known as linear dependence ? 
+6. for the column space of the matrix to encompass all of Rm, the matrix must contain at least one set of mlinearly independent columns. This condition is both necessary and suﬃcient for equation (2.11) to have a solution for every value of b  ?
+7. Euclidean norm usage
+8. The dot product of two vectors in terms of norms
+9. A vector x and a vector y are orthogonalto each other if xTy= 0
+10. If the vectors are not only orthogonal but also have unit norm, we call them orthonormal.
+ There is no special term for a matrix whose rows or columns are orthogonal but not orthonormal
+11. eigenvector , eigendecomposition concept and usage. how to decompose a matrix into eigenvectors and eigenvalues 
+
+2.3
+
+1.
+An identity matrix is a matrix that does not change any vector when we multiply that vector by that matrix.
+
+2.
+Thematrix inverseofAis denoted asA−1, and it is deﬁned as the matrixsuch that
+A−1 A = In
+
+3.
+Determining whether Ax=b has a solution thus amounts to testing whether b is in the span of the columns of A
+
+4.
+In order for the matrix to have an inverse, we additionally need to ensure that equation 2.11 has at most one solution for each value of b
+
+5.
+A square matrix with linearly dependent columns is known as singular
+
+6.
+In machine learning, we usuallymeasure the size of vectors using a function called anorm
+||x||p=(i|xi|p)1/p
+More rigorously, a norm is any function f that satisﬁes the following properties:
+• f (x) = 0 ⇒ x = 0
+• f (x + y) ≤ f(x) + f(y) (the triangle inequality)
+• ∀α ∈ R, f(αx) = |α|f(x)
+The L2 norm is used so frequently in machine learning that it is often denoted simply as||x||, with the subscript 2 omitted.
+It is also common to measure the size of a vector usingthe squared L2norm, which can be calculated simply as xTx.
+
+7.
+We sometimes measure the size of the vector by counting its number of nonzero elements.
+But the L1 norm is often used as a substitute for the number of nonzero entries
+>Page 40
+
+8.
+One other norm that commonly arises in machine learning is the L∞ norm,also known as themax norm
+||x||∞= maxi|xi|.
+
+9.
+Sometimes we may also wish to measure the size of a matrix. In the context of deep learning, the most common way to do this is with the otherwise obscure Frobenius norm
+||A||F=(i,j A2i,j,)
+
+10.
+The dot product of two vectors can be rewritten in terms of norms. Speciﬁcally,
+xTy = ||x||2||y||2cos θ
+where θ is the angle between x and y.
+
+11.
+Diagonalmatrices consist mostly of zeros and have non-zero entries only along the main diagonal.
+Formally, a matrixDis diagonal if and only if Di,j= 0 for all i != j
+
+12.
+A symmetric matrix is any matrix that is equal to its own transpose:
+A = AT
+For example,if A is a matrix of distance measurements, with Ai,j giving the distance from point i to point j, then Ai,j = Aj,i because distance functions are symmetric
+
+13.
+An eigenvector of a square matrix A is a non-zero vector v such that multiplication by A alters only the scale of v
+Av = λv.
+The scalar λ is known as the eigenvalue corresponding to this eigenvector. 
+
+14.
+we often want to decompose matrices into their eigenvalues and eigenvectors.
+Doing so can help us to analyze certain properties of the matrix, much as decomposing an integer into its prime factors can help us understand the behavior of that integer.
+Not every matrix can be decomposed into eigenvalues and eigenvectors.
+
+15.
+The eigendecomposition of a matrix tells us many useful facts about the matrix
+
+16.
+A matrix whose eigenvalues are all positive is calledpositive deﬁnite. A matrix whose eigenvalues are all positive or zero-valued is calledpositive semideﬁnite.
+Positivesemideﬁnite matrices are interesting because they guarantee that ∀x, xTAx ≥0
+
+17.
+The singular value decomposition(SVD) provides another way to factorizea matrix, into singular vectors and singular values.
+the SVD is more generally applicable. Every real matrix has a singular value decomposition, but the same is not true of the eigenvalue decomposition.
+Forexample, if a matrix is not square, the eigendecomposition is not deﬁned, and we must use a singular value decomposition instead
+
+the eigende composition involves analyzing a matrix A to discover a matrix V of eigenvectors and a vector of eigenvalues λ such that we can rewrite A as
+A = V diag(λ)V−1
+
+The singular value decomposition is similar, except this time we will write A as a product of three matrices:
+A = U DVT
+Suppose that A is an m×n matrix. Then U is deﬁned to be an m×m matrix, D to be an m×n matrix, and V to be an n×n matrix.
+The matrices U and V are both deﬁned to be orthogonal matrices. The matrix D is deﬁned to be a diagonal matrix. Note that D is not necessarily square.
+The elements along the diagonal of D are known as the singular values of the matrix A. The columns of U are known as the left-singular vectors. The columns of V are known as as the right-singular vectors
+the most useful feature of the SVD is that we can use it to partially generalize matrix inversion to non-square matrices, as we will see in the next section
+
+
 
