@@ -1,0 +1,102 @@
+chapter 3
+
+1. 
+If a doctor analyzes a patient and says that the patient has a 40% chance of having the ﬂu,this means something very diﬀerent—we can not make inﬁnitely many replicas ofthe patient, nor is there any reason to believe that diﬀerent replicas of the patient would present with the same symptoms yet have varying underlying conditions. In the case of the doctor diagnosing the patient, we use probability to represent adegree of belief, with 1 indicating absolute certainty that the patient has the ﬂuand 0 indicating absolute certainty that the patient does not have the ﬂu. The former kind of probability, related directly to the rates at which events occur, is known as frequentist probability, while the latter, related to qualitative levels of certainty, is known as Bayesian probability
+
+2.
+Probability can be seen as the extension of logic to deal with uncertainty. Logic provides a set of formal rules for determining what propositions are implied to be true or false given the assumption that some other set of propositions is true or false. Probability theory provides a set of formal rules for determining the likelihood of a proposition being true given the likelihood of other propositions.
+
+3.
+a random variable is just a description of the states that are possible; itmust be coupled with a probability distribution that speciﬁes how likely each ofthese states are.
+ 
+3.
+a probability distribution over many variables is known as a joint probability distribution
+
+4.
+P(x=x, y=y) denotes the probability that x=x and y=y simultaneously. We may also write P (x, y) for brevity
+
+5.
+When working with continuous random variables, we describe probability distributions using aprobability density function (PDF), rather than a probabilitymass function
+
+6.
+Sometimes we know the probability distribution over a set of variables and we want to know the probability distribution over just a subset of them. The probability distribution over the subset is known as the marginal probability distribution
+, suppose we have discrete random variablesxandy, and we know P (x, y). We can ﬁnd P (x) with the sum rule:
+∀x ∈ x, P (x = x) =yP (x = x, y = y)
+For continuous variables, we need to use integration instead of summation:
+p(x) =|p(x, y)dy
+
+7.
+In many cases, we are interested in the probability of some event, given that some other event has happened. This is called aconditional probability
+The conditional probability that a person is from Germany given that they speak German is quite high, but if a randomly selected person is taught to speak German, their country of origindoes not change.
+
+Computing the consequences of an action is called making an intervention query
+
+8.
+Two random variables x and y are independent if their probability distribution can be expressed as a product of two factors, one involving only x and one involvingonly y
+We can denote independence and conditional independence with compact notation: x⊥y means that x and y are independent, while x⊥y|z means that x and y are conditionally independent given z
+
+9.
+The expectation or expected value of some function f(x) with respect to a probability distribution P(x) is the average or mean value that f takes on when x is drawn from P.
+Here, function f(x) is the weight of x.
+
+10.
+The square root of the variance is known as the standard deviation
+
+11.
+They are related because two variables that are independent have zero covariance, and two variables that have non-zero covariance are dependent. However, independence is a distinct property from covariance.
+For two variables to have zero covariance, there must be no linear dependence between them. Independence is a stronger requirement than zero covariance, because independence also excludes nonlinear relationships.
+
+12.
+We often ﬁx the covariance matrix to be a diagonal matrix. An even simpler version is the isotropic Gaussian distribution
+
+13.
+Bayes’ Rule
+We often ﬁnd ourselves in a situation where we know P(y | x) and need to knowP(x | y). Fortunately, if we also knowP(x)
+P (x | y) =P(x)P(y|x) / p(y)
+it is usually feasible to compute P (y) =xP (y | x)P (x)
+
+14.
+The basic intuition behind information theory is that learning that an unlikely event has occurred is more informative than learning that a likely event has occurred.
+
+15.
+the Shannon entropy is known as the diﬀerential entropy
+
+16.
+Instead of using a single function to represent a probability distribution, we can split a probability distribution into many factors that we multiply together.
+For example, suppose we have three random variables: a, b and c. Suppose that a inﬂuences the value of b and b inﬂuences the value of c, but that a and c are independent given b
+p(a, b, c) = p(a)p(b | a)p(c | b). 
+
+17.
+When we represent the factorization of a probability distribution with a graph, we call it a structured probabilistic model or graphical model.
+
+18.
+Any set of nodes that are all connected to each other in G is called a clique
+
+19.
+There are two main kinds of structured probabilistic models: directed and undirected
+
+20.
+Being directed or undirected is not a property of a probability distribution; it is a property of a particular description of a probability distribution, but any probability distribution may be described in both ways.
+
+question : 
+1. 
+A discrete random variable is one that has a ﬁnite or countably inﬁnite number of states
+what is countably infinite number ? 
+2. how does covariance work ? 
+try to understand the formula of variance and covariance
+formula of variance.
+    Var(f(x)) = E[(f(x) − E[f(x)])2]
+The covariance
+    Cov(f(x), g(y)) = E [(f(x) − E [f(x)]) (g(y) − E [g(y)])] . (3.13)
+
+3. what is covariance matrix
+4. Bernoulli Distribution ?
+5. The most commonly used distribution over real numbers is Gaussian distribution 
+6. Exponential and Laplace Distributions ?
+7. The Dirac Distribution and Empirical Distribution ? A common use of the Dirac delta distribution is as a component of anempiricaldistribution
+8. Thesigmoid function saturates when its argument is very positive or very negative, meaning that the function becomes very ﬂat and insensitive to small changes in itsinput
+9. exp is expection ?
+σ(x) =exp(x)/(exp(x) + exp(0))
+
+
+
